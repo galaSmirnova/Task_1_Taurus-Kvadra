@@ -1,0 +1,46 @@
+body{
+    background-color: rgb(211, 208, 208);
+        font-family: Arial,
+        'Helvetica Neue',
+        Helvetica,
+        sans-serif;
+}
+.news_block {
+    width: 80%;
+    margin: 30px auto;
+    padding: 10px;
+    min-height: 200px;
+    border: 1px solid darkgrey;
+    background-color: rgb(231, 224, 224);
+    box-shadow: 0 1px 15px rgb(0 0 0 / 38%);
+}
+.news_block img{
+    float: right;
+    width: 150px; 
+    height: 150px;
+    object-fit: cover; 
+    margin: 20px 20px 0 20px;  
+}
+h2 {
+    font-size: 30px;
+    /* margin: 10px 0 20px 30px; */
+    }
+h2 a{
+    text-decoration: none;
+    color: black;
+}
+form {    
+    width: 50%; 
+    margin-left: 25%;
+    padding: 20px 20px 0 10px;
+    background-color: rgb(231, 224, 224);
+}
+form input,
+form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+form input[type="submit"] {
+    width: 20%;
+    margin-left: 40%;
+}
