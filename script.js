@@ -1,6 +1,6 @@
 var newsBlock = document.getElementById('news'),    
     form = document.getElementById('add'),
-    requestURL = 'data.json', //файл находится в той же папке, что и html-файл, который к нему обращается
+    requestURL = 'data.json',
     request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.onload = function(e) {
@@ -21,9 +21,9 @@ request.send();
  
 function getBlockInfo(data) {       
     data.articles.forEach(function(elem) {
-        let div = document.createElement('div');        
-        let date = new Date(Date.parse(elem.publishedAt));
-        let dateNews;
+        let div = document.createElement('div'),        
+            date = new Date(Date.parse(elem.publishedAt)),
+            dateNews;
             if ((date.getMonth(date) + 1) < 10) {
                 dateNews = date.getDate(date) + "." + "0" + (date.getMonth(date) + 1) + "." + date.getFullYear(date);
             } else {
