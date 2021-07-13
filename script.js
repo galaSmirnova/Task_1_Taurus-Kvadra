@@ -34,16 +34,20 @@ function getBlockInfo(data) {
         news.appendChild(div);
     }); 
 }
-form.onsubmit = function (evt) {
-        let div = document.createElement('div'),
-            titleNews = document.getElementById('title'),
+form.onsubmit = function (evt) { 
+        let titleNews = document.getElementById('title'),
             linkNews = document.getElementById('link_news'),
             imgNews = document.getElementById('link_img'),
             authorNews = document.getElementById('author'),
             dateSetNews = document.getElementById('date'),
-            descriptionNews = document.getElementById('description');
-        div.className = "news_block"; 
-        div.innerHTML = `<img src="${imgNews.value}"><h2><a href="${linkNews.value}">${titleNews.value}</a></h2><p>${dateSetNews.value} | ${authorNews.value}</p><p>${descriptionNews.value}</p>`;
-        news.prepend(div);
-        return false;    
+            descriptionNews = document.getElementById('description');           
+        
+        if (titleNews.value != '') {  
+                let div = document.createElement('div');       
+                div.className = "news_block"; 
+                div.innerHTML = `<img src="${imgNews.value}"><h2><a href="${linkNews.value}">${titleNews.value}</a></h2><p>${dateSetNews.value} | ${authorNews.value}</p><p>${descriptionNews.value}</p>`;
+                news.prepend(div);                
+                return false;    
+        }        
+        
     } 
