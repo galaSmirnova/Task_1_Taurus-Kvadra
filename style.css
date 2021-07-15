@@ -9,15 +9,16 @@ body{
     display: flex;
     flex-flow: row wrap;
     padding: 0 50px;
+    
 }
-.news_block {
-    flex: 22%;    
-    /* margin: 30px auto; */
+.news_block {    
+    width: 22%;     
     padding: 20px;
     margin-right: 1%;
     margin-bottom: 30px;
     min-height: 200px;
     border: 1px solid darkgrey;
+    border-radius: 5px;
     background-color: rgb(231, 224, 224);
     box-shadow: 0 1px 15px rgb(0 0 0 / 38%);
 }
@@ -39,16 +40,43 @@ form {
     width: 30%; 
     margin: 50px auto;
     padding: 30px 30px 0 20px;
-    background-color: rgb(231, 224, 224);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgb(226, 222, 222);
     box-shadow: 0 1px 15px rgb(0 0 0 / 38%);
 }
 form input,
 form textarea {
-    width: 100%;
-    margin-bottom: 10px;
+    width: 98%;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+form .field {
+    margin-bottom: 20px;
+}
+.error {
+	color: red;
+	text-align: left;
+	font-size: 12px;
+	display: block;
+	margin-top: 3px;
+	display: none;
 }
 form input[type="submit"] {
     width: 20%;
-    margin-left: 40%;
+    margin: 20px 0 30px 40%;
+    margin-top: 20px;
     padding: 5px;
+}
+input:valid:not(:placeholder-shown) {
+	border-color: green;
+}
+input:invalid:not(:placeholder-shown) {
+	border-color: red;
+}
+input:invalid:not(:placeholder-shown) + .error {
+	display: block;
 }
