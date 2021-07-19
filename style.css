@@ -66,10 +66,14 @@ form .field {
 	display: none;
 }
 form input[type="submit"] {
-    width: 20%;
-    margin: 20px 0 30px 40%;
-    margin-top: 20px;
-    padding: 5px;
+    width: 30%;
+    margin: 10px 33% 20px;      
+    padding: 10px 15px;
+    border: none;
+}
+form input[type="submit"]:hover {
+    background: rgb(124, 124, 124);
+    color: #fff;
 }
 input:valid:not(:placeholder-shown) {
 	border-color: green;
