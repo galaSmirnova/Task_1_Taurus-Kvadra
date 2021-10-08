@@ -10,12 +10,10 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    padding: 0 50px;
-
 }
 
 .news_block {
-    max-width: 250px;
+    max-width: 350px;
     padding: 20px;
     margin-right: 20px;
     margin-bottom: 30px;
